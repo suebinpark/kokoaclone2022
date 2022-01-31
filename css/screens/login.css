@@ -1,0 +1,97 @@
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(112, 128, 144, 0.8);
+}
+.welcome-header__title {
+  margin: 25px 0;
+  font-size: 25px;
+  font-weight: 600;
+}
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.7;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+#login-form input {
+  border: none;
+  padding: 20px 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+#login-form input:not([type="submit"]) {
+  border: 1.5px solid rgba(255, 255, 255, 0);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+#login-form input:focus {
+  border: white;
+}
+
+#login-form input[type="submit"] {
+  color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.7s ease-in-out;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  padding: 20px 10px;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+#login-form input[type="submit"]:hover {
+  background-color: white;
+}
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#splash-screen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  animation: hideSplashScreen 0.4s ease-in-out forwards;
+  animation-delay: 2s;
+  background-color: white;
+}
+#splash-screen img:first-child {
+  height: 150px;
+}
+#splash-screen img:nth-child(2) {
+  height: 100px;
+}
+#splash-screen img:nth-child(3) {
+  height: 50px;
+}
